@@ -1,28 +1,14 @@
 import React from 'react';
-import {useState, useEffect } from 'react';
 import './App.css';
 import Container from './components/Container/Container';
+import Header from './components/Header/Header';
 
 export default function App() {
 
-  const [theme, setTheme]= useState(false)
-
-  useEffect(()=>{
-    if(theme === true){
-      
-    }else{
-     console.log(false); 
-    }
-  })
-
-    
-  
-    
-
-
-  return (
+    return (
     <div className="App">
-    <Container theme={theme} setTheme={setTheme} />
+    <Header />
+    <Container />
     </div>
   );
 }
