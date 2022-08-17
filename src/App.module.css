@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.App {
+  background: linear-gradient(180deg, #8381ff 0%, rgba(119, 67, 111, 0) 100%);
+  background-blend-mode: exclusion;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.dart {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 374px;
+  height: 500px;
+  mix-blend-mode: soft-light;
+}
+
+.stars {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  mix-blend-mode: screen;
+}
