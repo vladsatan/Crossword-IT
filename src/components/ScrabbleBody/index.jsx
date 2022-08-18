@@ -116,6 +116,7 @@ const ScrabbleBody = () => {
   )
 }
 
+
 export default ScrabbleBody
 
 //Компонента Cube создает квадратик для кроссворда, нужно передать только id и номер слова
