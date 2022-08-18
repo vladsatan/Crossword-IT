@@ -8,6 +8,7 @@ export default function Cube(props) {
       <input
         disabled={disabled}
         type={'text'}
+        maxLength={1}
         value={value}
         className="cell_input"
       />
