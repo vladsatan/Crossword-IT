@@ -1,7 +1,8 @@
 import React from 'react'
 import './Container.css'
 import ScrabbleBody from '../ScrabbleBody'
-import Sidebar from '../Sidebar'
+import Sidebar from '../Sidebar/Sidebar'
+import Button from '../Button/Button'
 
 export default function Container() {
   return (
@@ -13,10 +14,11 @@ export default function Container() {
           <div className="green"></div>
         </div>
       </div>
-      <div className='container_body'>
-        <Sidebar/>
+      <div className="container_body">
+        <Sidebar />
         <ScrabbleBody />
       </div>
+      <Button />
     </div>
   )
 }

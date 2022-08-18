@@ -1,0 +1,27 @@
+///////////////light mode//////////////////
+
+$background-light: linear-gradient(
+  180deg,
+  #8381ff 0%,
+  rgba(119, 67, 111, 0) 100%
+);
+$sidebar-item-light: #ffffff;
+$scrabble-body-light: #282d31;
+$sidebar-text-light: #7f58d3;
+$dart-light: soft-light;
+$stars-light: screen;
+$position-light: flex-start;
+$position-color: #0000ff;
+
+//////////////dark mode/////////////////////
+$background-dark: linear-gradient(180deg, #0a0a0a 0%, #05a5ff 100%);
+$sidebar-item-dark: #000000;
+$scrabble-body-dark: white;
+$sidebar-text-dark: blue;
+$dart-dark: soft-light;
+$stars-dark: soft-light;
+$position-light: flex-end;
+$position-color: black;
+
+/////////////////for all mods//////////////
+$font-fam: Georgia, 'Times New Roman', Times, serif;
