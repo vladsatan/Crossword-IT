@@ -1,9 +1,6 @@
 import React from 'react'
 import './Cube.css'
 
-
-
-
 export default function Cube(props) {
   const { id, number, value, disabled } = props
   return (
