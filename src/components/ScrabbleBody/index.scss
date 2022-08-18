@@ -1,0 +1,80 @@
+@import '../../index.scss';
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.light {
+  .scrabble_body {
+    min-height: 400px;
+    min-width: 400px;
+    background: $scrabble-body-light;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 41px;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+.dark {
+  .scrabble_body {
+    min-height: 400px;
+    min-width: 400px;
+    background: $scrabble-body-dark;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 41px;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+/* Расположение слов в кроссворде */
+
+.wordForm,
+.wordScript,
+.wordVariable,
+.wordPolymorphism,
+.wordObject,
+.wordPreprocessor,
+.wordConcatenation {
+  display: flex;
+}
+
+.wordForm {
+  margin-left: 176px;
+}
+.wordScript {
+  margin-left: 89px;
+}
+
+.wordVariable {
+  margin-left: 44px;
+}
+
+.wordMain1 {
+  margin-left: 177px;
+}
+
+.wordPolymorphism {
+  /* без відступів */
+  margin-left: 0px;
+}
+
+.wordMain2 {
+  margin-left: 177px;
+}
+
+.wordObject {
+  margin-left: 177px;
+}
+
+.wordPreprocessor {
+  margin-left: 0px;
+  /* без відступів */
+}
+
+.wordConcatenation {
+  margin-left: 44px;
+}

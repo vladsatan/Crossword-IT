@@ -1,16 +1,19 @@
 import React from 'react'
-import styles from './App.module.css'
+import './App.scss'
 import Container from './components/Container/Container'
 import Header from './components/Header/Header'
 import dart from './img/dart.png'
 import stars from './img/stars.png'
+import { useState } from 'react'
 
 export default function App() {
+  const [version, setVersion] = useState('dark')
+
   return (
-    <div className={styles.App}>
-      <img alt="" className={styles.dart} src={dart} />
-      <img alt="" className={styles.stars} src={stars} />
-      <Header />
+    <div className={version === 'light' ? 'light' : 'dark'}>
+      <img alt="" className="dart" src={dart} />
+      <img alt="" className="stars" src={stars} />
+      <Header version={version} setVersion={setVersion} />
       <Container />
     </div>
   )
