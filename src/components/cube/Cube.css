@@ -1,33 +1,68 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/cube/Cube.css
 .cell {
   width: 40px;
   height: 40px;
   margin: 2px;
+========
+.scrabble_body {
+  min-height: 400px;
+  min-width: 400px;
+  background: #282d31;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 41px;
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+>>>>>>>> 7ceb09b108f4c08a36ecf240f1154fc9cd37e454:src/components/ScrabbleBody/index.css
 }
 
-.cell_input {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: #808080;
-  cursor: pointer;
-  font-family: 'Inter';
-  font-style: italic;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  color: #ff7323;
-  text-transform: uppercase;
-}
-.cell_input:focus {
-  background: #ff7323;
-  color: #ffffff;
-  outline: none;
-}
+/* Расположение слов в кроссворде */
 
+<<<<<<<< HEAD:src/components/cube/Cube.css
 .number {
   position: relative;
   top: -40px;
   right: -5px;
   color: white;
+========
+.wordForm, .wordScript, .wordVariable, .wordPolymorphism, .wordObject, .wordPreprocessor,  .wordConcatenation {
+  display: flex;
+>>>>>>>> 7ceb09b108f4c08a36ecf240f1154fc9cd37e454:src/components/ScrabbleBody/index.css
 }
+=======
+.cell {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+  }
+  
+  .cell_input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #808080;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #ff7323;
+    text-transform: uppercase;
+  }
+  .cell_input:focus {
+    background: #ff7323;
+    color: #ffffff;
+    outline: none;
+  }
+  
+  .number {
+    position: relative;
+    top:-40px;
+    right: -5px;
+    color: white;
+  }
+  
+>>>>>>> 7ceb09b108f4c08a36ecf240f1154fc9cd37e454
