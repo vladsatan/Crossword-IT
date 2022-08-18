@@ -1,11 +1,13 @@
-import styles from '../ScrabbleBody/index.module.css'
+import '../ScrabbleBody/index.css'
 
 const ScrabbleBody = () => {
   return (
-    <div className={styles.scrabble_body}>
-        <input id="dog1" className={styles.dog} />
-        <input id="dog2" className={styles.dog} />
-        <input id="dog3" className={styles.dog} />
+    <div className="scrabble_body">
+      <div id="id1" className="cell">
+        <input className="cell_input"/>
+        <span className="number">1</span>
+      </div>
+      
     </div>
   )
 }
