@@ -6,12 +6,11 @@
 
 .container {
   width: 70%;
-  height: 500px;
+  height: 700px;
   background: #d9d9d9;
   margin: 0 auto;
   border-radius: 20px;
   box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.25);
-  
 }
 
 .container-header {
@@ -52,10 +51,10 @@
 .red {
   background: #fa1010;
 }
-.container_body{
+.container_body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 440px;
+  height: 550px;
   overflow: hidden;
 }

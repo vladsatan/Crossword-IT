@@ -1,0 +1,78 @@
+@use '../src/index.scss';
+@import '../src/index.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.light {
+  background: $background-light;
+  background-blend-mode: exclusion;
+  width: 100vw;
+  height: max-content;
+  position: relative;
+  padding: 30px;
+}
+
+.dark {
+  background: $background-dark;
+  background-blend-mode: exclusion;
+  width: 100vw;
+  height: max-content;
+  position: relative;
+  padding: 30px;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+.light {
+  .dart {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 374px;
+    height: 500px;
+    mix-blend-mode: $dart-light;
+  }
+
+  .stars {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    mix-blend-mode: $stars-light;
+  }
+}
+
+.dark {
+  .dart {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 374px;
+    height: 500px;
+    mix-blend-mode: $dart-dark;
+  }
+
+  .stars {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    mix-blend-mode: $stars-dark;
+  }
+}
