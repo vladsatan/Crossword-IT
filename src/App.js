@@ -7,15 +7,15 @@ import stars from './img/stars.png'
 import { useState } from 'react'
 
 export default function App() {
-  
   const [version, setVersion] = useState('light')
+  const [isStart, setIsStart] = useState(false)
 
   return (
     <div className={version === 'light' ? 'light' : 'dark'}>
       <img alt="" className="dart" src={dart} />
       <img alt="" className="stars" src={stars} />
-      <Header version={version} setVersion={setVersion} />
-      <Container />
+      <Header isStart={isStart} version={version} setVersion={setVersion} />
+      <Container isStart={isStart} setIsStart={setIsStart} />
     </div>
   )
 }
