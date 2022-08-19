@@ -7,7 +7,8 @@ import stars from './img/stars.png'
 import { useState } from 'react'
 
 export default function App() {
-  const [version, setVersion] = useState('dark')
+  
+  const [version, setVersion] = useState('light')
 
   return (
     <div className={version === 'light' ? 'light' : 'dark'}>
