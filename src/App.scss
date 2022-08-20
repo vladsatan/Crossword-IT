@@ -25,6 +25,7 @@ h1 {
   height: max-content;
   position: relative;
   padding: 30px;
+  z-index: 2;
 }
 
 .dark {
@@ -51,6 +52,7 @@ body::-webkit-scrollbar {
 
   .stars {
     position: absolute;
+    z-index: -1;
     left: 0px;
     top: 0px;
     height: 100%;

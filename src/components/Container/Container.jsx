@@ -4,11 +4,9 @@ import ScrabbleBody from '../ScrabbleBody'
 import Sidebar from '../Sidebar/Sidebar'
 import Button from '../Button/Button'
 import StartGame from '../StartGame/StartGame'
-import { useState } from 'react'
 
-export default function Container() {
-
-   const [isStart, setIsStart] = useState(false)
+export default function Container(props) {
+  const { isStart, setIsStart } = props
 
   return (
     <div className="container">
@@ -20,25 +18,17 @@ export default function Container() {
         </div>
       </div>
 
-
-      {isStart? 
-      <>
-      <div className="container_body">
-        <Sidebar />
-        <ScrabbleBody />
-      </div>
-      <Button /> 
-      </>
-      :
-      <StartGame setIsStart={setIsStart} />
-      }
-      
-      
-
-
-
-
-</div>
-    
+      {isStart ? (
+        <>
+          <div className="container_body">
+            <Sidebar />
+            <ScrabbleBody />
+          </div>
+          <Button />
+        </>
+      ) : (
+        <StartGame setIsStart={setIsStart} />
+      )}
+    </div>
   )
 }
