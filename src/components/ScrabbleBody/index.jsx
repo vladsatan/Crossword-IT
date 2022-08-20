@@ -43,7 +43,7 @@ const ScrabbleBody = () => {
       {/* // слово "буква Й главного слова" */}
 
       <div className="wordMain1">
-        <Cube id={'id22'} value={'Й'} disabled={true} />
+        <Cube id={'id22'} />
       </div>
 
       {/* // слово "Полиморфизм" номер 5 */}
@@ -65,7 +65,7 @@ const ScrabbleBody = () => {
       {/* // слово "буква В главного слова" */}
 
       <div className="wordMain2">
-        <Cube id={'id32'} value={'В'} disabled={true} />
+        <Cube id={'id32'}/>
       </div>
 
       {/* слово "Объект" номер 6 */}
