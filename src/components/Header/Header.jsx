@@ -49,7 +49,6 @@ export default function Header(props) {
 
   useEffect(() => {
     if (isStart) {
-      console.log('start')
       setTimeout(() => {
         secondCounter()
       }, 1000)
