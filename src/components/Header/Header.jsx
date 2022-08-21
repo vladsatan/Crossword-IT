@@ -5,9 +5,9 @@ import { useCallback } from 'react'
 export default function Header(props) {
   const { getTimerResult, isStart, setVersion, version } = props
   const [date, setDate] = useState(0)
-  const [seconds, setSeconds] = useState("00")
-  const [minutes, setMinutes] = useState("00")
-  const [hours, setHours] = useState("00")
+  const [seconds, setSeconds] = useState('00')
+  const [minutes, setMinutes] = useState('00')
+  const [hours, setHours] = useState('00')
 
   const secondCounter = useCallback(() => {
     setDate((date) => date + 1000)
@@ -45,8 +45,8 @@ export default function Header(props) {
         setHours(Math.floor(changeHours).toString())
       }
     }
-    getTimerResult(`0${hours}:0${minutes}:0${seconds}`)
-  }, [date, hours, minutes, seconds,getTimerResult])
+    getTimerResult(`${hours}:${minutes}:${seconds}`)
+  }, [date, hours, minutes, seconds, getTimerResult])
 
   useEffect(() => {
     if (isStart === 'start') {
@@ -55,9 +55,9 @@ export default function Header(props) {
       }, 1000)
     } else {
       clearTimeout(setDate)
-      setMinutes("00")
-      setSeconds("00")
-      setHours("00")
+      setMinutes('00')
+      setSeconds('00')
+      setHours('00')
     }
   }, [isStart, secondCounter, hours, minutes, seconds])
 
