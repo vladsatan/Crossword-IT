@@ -4,9 +4,10 @@ import ScrabbleBody from '../ScrabbleBody'
 import Sidebar from '../Sidebar/Sidebar'
 import Button from '../Button/Button'
 import StartGame from '../StartGame/StartGame'
+import Finish from '../Results/Results'
 
 export default function Container(props) {
-  const { isStart, setIsStart } = props
+  const { timerResult, isStart, setIsStart } = props
 
   return (
     <div className="container">
@@ -18,17 +19,17 @@ export default function Container(props) {
         </div>
       </div>
 
-      {isStart ? (
+      {isStart === 'start' && (
         <>
           <div className="container_body">
             <Sidebar />
             <ScrabbleBody />
           </div>
-          <Button />
+          <Button setIsStart={setIsStart} />
         </>
-      ) : (
-        <StartGame setIsStart={setIsStart} />
       )}
+      {isStart === 'notstarted' && <StartGame setIsStart={setIsStart} />}
+      {isStart === 'results' && <Finish timerResult={timerResult} />}
     </div>
   )
 }

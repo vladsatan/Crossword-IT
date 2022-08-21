@@ -3,11 +3,11 @@ import './Header.scss'
 import { useCallback } from 'react'
 
 export default function Header(props) {
-  const { isStart, setVersion, version } = props
+  const { getTimerResult, isStart, setVersion, version } = props
   const [date, setDate] = useState(0)
-  const [seconds, setSeconds] = useState(0)
-  const [minutes, setMinutes] = useState(0)
-  const [hours, setHours] = useState(0)
+  const [seconds, setSeconds] = useState("00")
+  const [minutes, setMinutes] = useState("00")
+  const [hours, setHours] = useState("00")
 
   const secondCounter = useCallback(() => {
     setDate((date) => date + 1000)
@@ -45,17 +45,21 @@ export default function Header(props) {
         setHours(Math.floor(changeHours).toString())
       }
     }
-  }, [date, hours, minutes, seconds])
+    getTimerResult(`0${hours}:0${minutes}:0${seconds}`)
+  }, [date, hours, minutes, seconds,getTimerResult])
 
   useEffect(() => {
-    if (isStart) {
+    if (isStart === 'start') {
       setTimeout(() => {
         secondCounter()
       }, 1000)
     } else {
       clearTimeout(setDate)
+      setMinutes("00")
+      setSeconds("00")
+      setHours("00")
     }
-  }, [isStart, secondCounter])
+  }, [isStart, secondCounter, hours, minutes, seconds])
 
   return (
     <header>

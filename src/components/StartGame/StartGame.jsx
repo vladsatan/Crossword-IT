@@ -8,7 +8,7 @@ export default function StartGame(props){
   
     return(
      <div className="start-container">
-        <button className="start-button" onClick={()=> setIsStart(true)}>Start Game</button>
+        <button className="start-button" onClick={()=> setIsStart("start")}>Start Game</button>
      </div>
   )
 }
