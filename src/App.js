@@ -8,14 +8,24 @@ import { useState } from 'react'
 
 export default function App() {
   const [version, setVersion] = useState('light')
-  const [isStart, setIsStart] = useState(false)
+  const [isStart, setIsStart] = useState('notstarted')
+  const [timerResult, getTimerResult] = useState(null)
 
   return (
     <div className={version === 'light' ? 'light' : 'dark'}>
       <img alt="" className="dart" src={dart} />
       <img alt="" className="stars" src={stars} />
-      <Header isStart={isStart} version={version} setVersion={setVersion} />
-      <Container isStart={isStart} setIsStart={setIsStart} />
+      <Header
+        getTimerResult={getTimerResult}
+        isStart={isStart}
+        version={version}
+        setVersion={setVersion}
+      />
+      <Container
+        timerResult={timerResult}
+        isStart={isStart}
+        setIsStart={setIsStart}
+      />
     </div>
   )
 }

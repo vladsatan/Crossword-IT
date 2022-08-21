@@ -1,10 +1,11 @@
 import { Fragment } from 'react'
 import '../Button/Button.css'
 
-const Button = () => {
+const Button = (props) => {
+  const {setIsStart}=props;
   return (
     <Fragment>
-      <button className="button">FINISH GAME</button>
+      <button onClick={()=>{setIsStart("results")}} className="button">FINISH GAME</button>
     </Fragment>
   )
 }
