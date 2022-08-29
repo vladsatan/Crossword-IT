@@ -4,7 +4,9 @@
 .light{
   .start-container {
     width: 100%;
-    height: 600px;
+    height: 650px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     background: $background-light;
     display: flex;
     align-items: center;
@@ -16,7 +18,9 @@
 .dark{
   .start-container {
     width: 100%;
-    height: 600px;
+    height: 650px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     background: $background-dark;
     display: flex;
     align-items: center;
