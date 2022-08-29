@@ -1,0 +1,49 @@
+.result_container {
+    width: 100%;
+    height: 650px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.result_container h1 {
+    color: aquamarine;
+    font-size: 70px;
+}
+
+.result_container p {
+    color: white;
+    font-size: 25px;
+}
+
+
+
+.continueBTN {
+        background: #ff5c00;
+      
+        box-shadow: 3px 7px #b94401;
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        border: none;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+        color: #ffa500;
+        display: block;
+        margin:20px auto;
+        transition: .3s;
+      }
+      
+      .continueBTN:hover {
+        color: yellow;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+
+
