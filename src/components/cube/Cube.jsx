@@ -15,7 +15,7 @@ export default function Cube(props) {
     if(item.toUpperCase()===answer.toUpperCase()){
       setDisabled(true)
     }
-  })
+  }, [item, answer])
 
   
 
