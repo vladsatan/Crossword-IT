@@ -13,8 +13,9 @@ const ScrabbleBody = (props) => {
         <Cube setCounter={setCounter} id={'id3'} answer={'р'} />
         <Cube setCounter={setCounter} id={'id2'} number={2} answer={'о'} />
         <Cube setCounter={setCounter} id={'id4'} answer={'м'} />
+        <Cube setCounter={setCounter} id={'id5'} answer={'а'} />
+
       </div>
-      <Cube setCounter={setCounter} id={'id5'} answer={'а'} />
 
       {/* // слово "Скрипт" номер 3 */}
 
