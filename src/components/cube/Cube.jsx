@@ -4,12 +4,17 @@ import './Cube.css'
 import { useRef } from 'react'
 
 export default function Cube(props) {
-  const { id, number, answer, setCounter } = props
+  const {
+    id,
+    number,
+    answer,
+    setCounter,
+    enabledInput,
+    setEnabledInput,
+  } = props
   const [item, setItem] = useState('')
   const [disabled, setDisabled] = useState(false)
   const reference = useRef()
-  const [bool, setBool] = useState(true)
-
   const handlechange = (event) => {
     setItem(event.target.value)
   }
@@ -17,20 +22,22 @@ export default function Cube(props) {
   useEffect(() => {
     const inputRef = reference.current
     const addEvent = inputRef.addEventListener('click', () => {
-        if (bool) {
-          console.log(answer)
-          setItem(answer)
-          setBool(false)
-        }
-      })
+      if (enabledInput === true) {
+        console.log(answer)
+        setItem(answer)
+        setEnabledInput(false)
+        console.log(enabledInput)
+      }
+    })
+
+    if (enabledInput === false) {
+      setEnabledInput(false)
+    }
 
     return () => {
       inputRef.removeEventListener('click', addEvent)
     }
-    // return () => {
-    //   inputRef.removeEventListener('click', addEvent)
-    // }
-  }, [answer, bool, item])
+  }, [answer, item, enabledInput, setEnabledInput])
 
   useEffect(() => {
     if (item.toUpperCase() === answer.toUpperCase()) {

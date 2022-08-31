@@ -10,6 +10,8 @@ import { useState } from 'react'
 export default function Container(props) {
   const { timerResult, isStart, setIsStart } = props
   const [counter, setCounter] = useState(0)
+  const [hint, setHint] = useState(3)
+  const [enabledInput, setEnabledInput] = useState(false)
 
   return (
     <div className="container">
@@ -19,14 +21,24 @@ export default function Container(props) {
           <div className="yelloy"></div>
           <div className="green"></div>
         </div>
-        <button className="zxc">?</button>
+        <button
+          disabled={hint === 0}
+          onClick={() => {
+            setHint((hint) => hint - 1)
+            setEnabledInput(true)
+            console.log(enabledInput)
+          }}
+          className="zxc"
+        >
+          ?
+        </button>
       </div>
 
       {isStart === 'start' && (
         <>
           <div className="container_body">
             <Sidebar />
-            <ScrabbleBody setCounter={setCounter} />
+            <ScrabbleBody setEnabledInput={setEnabledInput} enabledInput={enabledInput} setCounter={setCounter} />
           </div>
           <Button setIsStart={setIsStart} />
         </>
@@ -36,6 +48,5 @@ export default function Container(props) {
         <Finish counterResult={counter} timerResult={timerResult} />
       )}
     </div>
-    
   )
 }
