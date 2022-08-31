@@ -10,8 +10,8 @@ const ScrabbleBody = (props) => {
 
       <div className="wordForm">
         <Cube setCounter={setCounter} id={'id1'} number={1} answer={'ф'} />
-        <Cube setCounter={setCounter} id={'id3'} answer={'р'} />
         <Cube setCounter={setCounter} id={'id2'} number={2} answer={'о'} />
+        <Cube setCounter={setCounter} id={'id3'} answer={'р'} />
         <Cube setCounter={setCounter} id={'id4'} answer={'м'} />
         <Cube setCounter={setCounter} id={'id5'} answer={'а'} />
 
@@ -20,8 +20,8 @@ const ScrabbleBody = (props) => {
       {/* // слово "Скрипт" номер 3 */}
 
       <div className="wordScript">
-        <Cube setCounter={setCounter} id={'id7'} answer={'к'} />
         <Cube setCounter={setCounter} id={'id6'} number={3} answer={'с'} />
+        <Cube setCounter={setCounter} id={'id7'} answer={'к'} />
         <Cube setCounter={setCounter} id={'id8'} answer={'р'} />
         <Cube setCounter={setCounter} id={'id9'} answer={'и'} />
         <Cube setCounter={setCounter} id={'id10'} answer={'п'} />
@@ -31,8 +31,8 @@ const ScrabbleBody = (props) => {
       {/* // слово "Переменная" номер 4 */}
 
       <div className="wordVariable">
+      <Cube setCounter={setCounter} id={'id12'} number={4} answer={'п'} />
         <Cube setCounter={setCounter} id={'id13'} answer={'е'} />
-        <Cube setCounter={setCounter} id={'id12'} number={4} answer={'п'} />
         <Cube setCounter={setCounter} id={'id14'} answer={'р'} />
         <Cube setCounter={setCounter} id={'id15'} answer={'е'} />
         <Cube setCounter={setCounter} id={'id16'} answer={'м'} />
