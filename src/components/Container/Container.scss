@@ -58,3 +58,22 @@
   height: 550px;
   overflow: hidden;
 }
+
+.zxc{
+  width: 29px;
+  height: 29px;
+  background-color: #ff5e00;
+  border: none;
+  border: 1px solid #ff5e00;
+  outline: none;
+  color: #ffa500;
+  border-radius: 5px;
+  font-size: 25px;
+  transition: .3s ease-in-out;
+  z-index: 4;
+}
+
+.zxc:hover{
+ color: gold;
+ border: 1px solid gold;
+}
