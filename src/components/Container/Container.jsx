@@ -5,9 +5,13 @@ import Sidebar from '../Sidebar/Sidebar'
 import Button from '../Button/Button'
 import StartGame from '../StartGame/StartGame'
 import Finish from '../Results/Results'
+import { useState } from 'react'
+
 
 export default function Container(props) {
   const { timerResult, isStart, setIsStart } = props
+
+  const [id1, setId1] = useState(false)
 
   return (
     <div className="container">
