@@ -11,7 +11,15 @@ export default function Cube(props) {
     setItem(event.target.value)
   }
 
+
+  useEffect(()=>{
+    if(item.toUpperCase()===answer.toUpperCase()){
+      setDisabled(true)
+    }
+  }, [item, answer])
+
   useEffect(() => {
+
 
     if (item.toUpperCase() === answer.toUpperCase()) {
       console.log("dis")

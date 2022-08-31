@@ -1,5 +1,5 @@
 import React from 'react'
-import './Container.css'
+import './Container.scss'
 import ScrabbleBody from '../ScrabbleBody'
 import Sidebar from '../Sidebar/Sidebar'
 import Button from '../Button/Button'
@@ -9,8 +9,6 @@ import { useState } from 'react'
 
 export default function Container(props) {
   const { timerResult, isStart, setIsStart } = props
-
-  const [id1, setId1] = useState(false)
   const [counter, setCounter] = useState(0)
 
   return (
@@ -21,6 +19,7 @@ export default function Container(props) {
           <div className="yelloy"></div>
           <div className="green"></div>
         </div>
+        <button className="zxc">?</button>
       </div>
 
       {isStart === 'start' && (
@@ -37,5 +36,6 @@ export default function Container(props) {
         <Finish counterResult={counter} timerResult={timerResult} />
       )}
     </div>
+    
   )
 }
