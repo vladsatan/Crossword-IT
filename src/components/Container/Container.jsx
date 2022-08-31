@@ -7,11 +7,11 @@ import StartGame from '../StartGame/StartGame'
 import Finish from '../Results/Results'
 import { useState } from 'react'
 
-
 export default function Container(props) {
   const { timerResult, isStart, setIsStart } = props
 
   const [id1, setId1] = useState(false)
+  const [counter, setCounter] = useState(0)
 
   return (
     <div className="container">
@@ -27,13 +27,15 @@ export default function Container(props) {
         <>
           <div className="container_body">
             <Sidebar />
-            <ScrabbleBody />
+            <ScrabbleBody setCounter={setCounter} />
           </div>
           <Button setIsStart={setIsStart} />
         </>
       )}
       {isStart === 'notstarted' && <StartGame setIsStart={setIsStart} />}
-      {isStart === 'results' && <Finish timerResult={timerResult} />}
+      {isStart === 'results' && (
+        <Finish counterResult={counter} timerResult={timerResult} />
+      )}
     </div>
   )
 }
